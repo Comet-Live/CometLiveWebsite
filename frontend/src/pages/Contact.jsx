@@ -21,13 +21,13 @@ const Contact = () => {
         setLoading(true);
         emailjs
             .send(
-                "service_ape1xzq",
+                "service_ikuukx2",
                 "template_559zlt7",
                 {
                     from_name: form.name,
                     to_name: "Comet Live",
                     from_email: form.email,
-                    to_email: "veermickey@gmail.com",
+                    to_email: "support@cometlive.me",
                     message: form.message,
                 },
                 "9OuI3gv7oB9ClVuRO"

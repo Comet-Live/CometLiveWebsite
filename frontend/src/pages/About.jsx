@@ -6,7 +6,7 @@ export default function About() {
         <div>
             <WebNavbar />
             <div className=" mx-10 rounded-3xl  p-12">
-                <h1 className="text-primary font-bold text-6xl">About.</h1>
+                <h1 className="text-primary font-bold mb-3 text-6xl">About.</h1>
                 <p className="text-black">
                     Comet Live is a social media platform for UTD students that
                     lets you make friends and connect with people in your
