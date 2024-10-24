@@ -64,14 +64,18 @@ const Contact = () => {
         <div className="text-black">
             <WebNavbar />
             <div className="mt-16 text-center max-w-5xl mx-auto px-4 lg:px-0">
-                <h3 className="text-4xl lg:text-6xl font-bold text-primary">
+                <h3 className="text-6xl lg:text-6xl font-bold text-primary">
                     Contact.
                 </h3>
                 <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: alert ? 1 : 0, y: alert ? 0 : -40 }}
+                    initial={{ opacity: 0, y: 0 }}
+                    animate={{
+                        opacity: alert ? 1 : 0,
+                        y: alert ? -40 : -40,
+                        scale: alert ? 1 : 0,
+                    }}
                     transition={{ duration: 0.5 }}
-                    className="text-xl lg:text-2xl font-bold mt-16 text-primary fixed top-0 left-0 right-0 mx-auto p-4 lg:p-8 bg-white rounded-3xl shadow-2xl max-w-md z-40"
+                    className="text-xl lg:text-2xl font-bold mt-16 text-primary fixed top-0 left-0 right-0 mx-auto p-4 lg:p-8 bg-white rounded-3xl shadow-2xl max-w-md z-10"
                 >
                     Thank you. We will get back to you as soon as possible.
                 </motion.div>
@@ -135,7 +139,7 @@ const Contact = () => {
                     </motion.button>
                 </form>
             </div>
-            <div className="h-36"></div>
+            <div className="h-36 sm:h-8"></div>
         </div>
     );
 };
