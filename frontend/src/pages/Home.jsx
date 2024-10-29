@@ -25,17 +25,17 @@ export default function Home() {
     const navigate = useNavigate();
     return (
         <>
-            <div className="min-h-screen flex flex-col">
+            <div className="flex flex-col md:min-h-screen">
                 <WebNavbar />
 
-                <div className="flex-grow flex flex-col md:flex-row md:items-center">
-                    {/* PhoneModel - hidden on mobile */}
-                    <div className="hidden md:flex w-full md:w-1/2 items-center justify-center p-4">
+                {/* Responsive layout for phone model and heading */}
+                <div className="flex-grow flex flex-col md:flex-row">
+                    <div className="hidden scale-0 md:scale-100 lg:flex w-full md:w-1/2 items-center justify-center">
                         <PhoneModel />
                     </div>
 
                     {/* Heading */}
-                    <div className="w-full md:w-1/2 flex flex-col text-left items-center justify-center p-4 md:p-0">
+                    <div className="w-full md:w-1/2 flex flex-col text-left items-center justify-center  p-4 md:p-0">
                         <h1 className="text-4xl md:text-6xl font-bold text-primary mb-6">
                             Find Your Best Friends at UTD
                         </h1>
@@ -43,6 +43,10 @@ export default function Home() {
                             Connect with fellow Comets who share your interests,
                             majors, and campus experiences.
                         </p>
+                        {/* Image - only visible on mobile */}
+                        <div className="block md:hidden border-4 border-black rounded-3xl p-3">
+                            <img src="Match.png" alt="Apple" />
+                        </div>
                     </div>
                 </div>
             </div>
