@@ -117,7 +117,7 @@ export default function Home() {
             </div>
 
             {/* Extra space at the bottom */}
-            <div className="h-36 md:h-72"></div>
+            <div className="h-16"></div>
         </>
     );
 }
