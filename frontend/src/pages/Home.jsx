@@ -5,14 +5,12 @@ import { Users, Heart, Shield, Download } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 export const FeatureCard = ({ icon: Icon, title, description }) => (
-    <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 flex flex-col items-center text-center">
+    <div className="border-2 rounded-xl p-6 flex flex-col items-center text-center">
         <div className="rounded-full bg-primary/10 p-3 mb-4">
             <Icon className="w-6 h-6 text-primary" />
         </div>
         <h3 className="text-3xl font-semibold mb-4">{title}</h3>
-        <p className="text-xl text-gray-600 dark:text-gray-300">
-            {description}
-        </p>
+        <p className="text-xl text-primary">{description}</p>
     </div>
 );
 
@@ -30,15 +28,14 @@ export default function Home() {
             <div className="min-h-screen flex flex-col">
                 <WebNavbar />
 
-                {/* Responsive layout for phone model and heading */}
-                <div className="flex-grow flex flex-col md:flex-row">
-                    {/* Phone Model - hidden on small screens */}
-                    <div className="hidden scale-0 md:scale-100 lg:flex w-full md:w-1/2 items-center justify-center p-4">
+                <div className="flex-grow flex flex-col md:flex-row md:items-center">
+                    {/* PhoneModel - hidden on mobile */}
+                    <div className="hidden md:flex w-full md:w-1/2 items-center justify-center p-4">
                         <PhoneModel />
                     </div>
 
                     {/* Heading */}
-                    <div className="w-full md:w-1/2 flex flex-col text-left items-center justify-center  p-4 md:p-0">
+                    <div className="w-full md:w-1/2 flex flex-col text-left items-center justify-center p-4 md:p-0">
                         <h1 className="text-4xl md:text-6xl font-bold text-primary mb-6">
                             Find Your Best Friends at UTD
                         </h1>
@@ -51,7 +48,7 @@ export default function Home() {
             </div>
 
             {/* Description Section */}
-            <div className="mt-10 mx-6 md:mx-16">
+            <div className="mt-10 mx-6 md:mx-16 text-center">
                 <p className="text-lg md:text-3xl leading-relaxed md:leading-normal">
                     Are you a UT Dallas student looking to build meaningful
                     connections within your college community?
